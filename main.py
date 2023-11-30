@@ -1,10 +1,8 @@
 # Teero 
 
-import time
-import sleep from time
-
-# Var for Startingweapon
-st.wep = input ("Do you want to have an easier experience?")
+from time import sleep
+import random
+st_wep = None
 
 class Player:
     def __init__(self, weapon):
@@ -17,6 +15,12 @@ class Player:
 
     def heal(self, amount):
         self.hp += amount
+
+# Calculate player's attack damage based on the chosen weapon
+    def get_damage(self):
+        base_damage = random.randint(10, 15)
+        return base_damage + self.weapon_effect()
+    
 
 # Define weapon effects on damage
 def weapon_effect(self):
@@ -33,32 +37,33 @@ def weapon_effect(self):
     elif self.weapon == "dust":
         return 1
     elif self.weapon == "bleeding hands":
+        return -1
     else:
         return 0
 
-# Calculate player's attack damage based on the chosen weapon
-    def get_damage(self):
-        base_damage = random.randint(10, 15)
-        return base_damage + self.weapon_effect()
 
-
-
-
-def intro ()
+def intro ():
     print ("Welcome to Teero. This game is a textbased game so be prepaired to read a lot ^^")
     sleep (3)
     print ("So let us getting started")
     sleep (3)
-    print (st.wep)
-        if st.wep is any str (yes,yeah,y)
-        set weapon = axe
-        elif st.wep is any str (n,no,nah)
-            return
-        else 
-            return
-    print ("So you made your choice.")
-    sleep (3)
-    print ("")
+    # Var for Startingweapon
+    global st_wep
+    st_wep = input ("Do you want to have an easier experience? \n")
+    if st_wep.lower() in ["yes","yeah","y"]:
+        player = Player("axe")  # Creating the player instance with an initial weapon
+    elif st_wep.lower in ["n","no","nah"]:
+        player = Player("")  # Creating the player instance with an initial weapon
+        return
+    else:
+        print ("Invalide argument. Try again with y; yes; yeah or n; no; nah.")
+        player = None 
+        return
+    if player:
+        print ("So you made your choice.")
+        sleep (3)
+    
+    
 
 
 
@@ -68,8 +73,8 @@ def intro ()
 
 
 # Function to initiate and control the gameplay
-def play_game()
-    weapon = st.wep
+def play_game():
+    weapon = st_wep
     player = Player (weapon)
     intro ()
 
