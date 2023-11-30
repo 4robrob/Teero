@@ -41,4 +41,4 @@ Thank you for being a part of improving Teero and making it an enjoyable gaming 
 
 
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the LICENSE.md [https://github.com/4robrob/Teero/blob/main/LICENSE] file for details.
