@@ -52,7 +52,7 @@ def intro ():
     st_wep = input ("Do you want to have an easier experience? \n")
     if st_wep.lower() in ["yes","yeah","y"]:
         player = Player("axe")  # Creating the player instance with an initial weapon
-    elif st_wep.lower in ["n","no","nah"]:
+    elif st_wep.lower () in ["n","no","nah"]:
         player = Player("")  # Creating the player instance with an initial weapon
         return
     else:
