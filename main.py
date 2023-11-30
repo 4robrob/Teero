@@ -1,4 +1,10 @@
 # Teero 
+# git add .
+# git commit -m "<Description>"
+# git push
+
+#test
+
 
 from time import sleep
 import random
@@ -16,11 +22,6 @@ class Player:
     def heal(self, amount):
         self.hp += amount
 
-# Calculate player's attack damage based on the chosen weapon
-    def get_damage(self):
-        base_damage = random.randint(10, 15)
-        return base_damage + self.weapon_effect()
-    
 
 # Define weapon effects on damage
 def weapon_effect(self):
@@ -41,6 +42,10 @@ def weapon_effect(self):
     else:
         return 0
 
+# Calculate player's attack damage based on the chosen weapon
+def get_damage(self):
+    base_damage = random.randint(10, 15)
+    return base_damage + self.weapon_effect()
 
 def intro ():
     print ("Welcome to Teero. This game is a textbased game so be prepaired to read a lot ^^")
