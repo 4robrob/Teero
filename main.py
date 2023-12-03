@@ -1,9 +1,9 @@
 # Teero 
-# git add .
-# git commit -m "<Description>"
-# git push
 
-#test 3
+# To push via VS Code:
+##git add .
+##git commit -m "<Description>"
+##git push
 
 
 from time import sleep
